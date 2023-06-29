@@ -7,10 +7,8 @@ class InferenceTestUser(FastHttpUser):
     @task
     def predict(self):
         self.client.post(
-            "/predict",
+            "/predictions/benchmark",
             json={
-                "queries": [
-                    "Bloomberg has decided to publish a new report on the global economy."
-                ]
+                "text": "Bloomberg has decided to publish a new report on the global economy."
             },
         )
