@@ -8,5 +8,9 @@ class InferenceTestUser(FastHttpUser):
     def predict(self):
         self.client.post(
             "/predict",
-            json={"queries": ["Hello, how are you doing today?"]},
+            json={
+                "queries": [
+                    "Bloomberg has decided to publish a new report on the global economy."
+                ]
+            },
         )
